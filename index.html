@@ -26,11 +26,11 @@
             <a href="#" class="logo"><img src="img/logo_portfolio.png" alt="logo"></a>
 
             <div class="links">
-                <a href="" class="active">Home</a>
-                <a href="">About</a>
-                <a href="">Services</a>
-                <a href="">Projects</a>
-                <a href="">Contacts</a>
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contacts">Contacts</a>
             </div>
 
             <div class="icons">
@@ -40,7 +40,7 @@
         </nav>
     </header>
 
-    <div class="home">
+    <div class="home" id="home">
         <div class="container">
             <div class="content">
                 <h4>Hello, I'm</h4>
@@ -50,8 +50,7 @@
                     Ipsam provident voluptatum dignissimos aliquam odit cumque 
                     eum voluptatibus illum dolorem adipisci!</p>
                 <div class="btns">
-                    <a href="#" class="btn">Hire me</a>
-                    <a href="#" class="btn_no_bg">Download Resume</a>
+                    <a href="#contacts" class="btn">Hire me</a>
                 </div>
             </div>
 
@@ -62,22 +61,24 @@
         </div>
     </div>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="content">
                 <h5>about me</h5>
-                <h2><span>i'm a developer</span></h2>
-                <h4>i develop application that help people</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Debitis sunt at itaque doloremque voluptatum quae, natus soluta 
-                    perferendis impedit nobis.</p>
+                <p class="intro_job">I'm a dedicated</p>
+                <h2><span>{{ client.job_title }}</span></h2>
+                <p class="content_about">
+                    based in <strong>{{ client.location }}</strong>, with over <strong>{{ client.experience }} years</strong> of experience in the tech industry.
+                    I'm passionate about creating smart and creative digital solutions, 
+                    and I value teamwork, learning, and continuous improvement.
+                </p>
 
-                <ul>
+                <!-- <ul>
                     <li><i class="fa-solid fa-check"></i> web development</li>
                     <li><i class="fa-solid fa-check"></i> UI/UX Design</li>
                     <li><i class="fa-solid fa-check"></i> digital marketing</li>
                     <li><i class="fa-solid fa-check"></i> product design</li>
-                </ul>
+                </ul> -->
  
                 <div class="cv">
                     <label for="cv">download CV</label>
@@ -91,27 +92,27 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="skills" id="skills">
         <div class="container">
             <div class="top_section">
-                <h2>our <span>services</span></h2>
+                <h2>my <span>Skills & Certifications</span></h2>
             </div>
             <div class="boxes">
                 <div class="box">
-                    <i class="fa-solid fa-pen-ruler"></i>
-                    <h4>web developer</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro nihil beatae ex sapiente veritatis eius vel aspernatur dolor enim. Doloremque!</p>
-                    <a href="" class="btn">read more</a>
-                </div>
-                <div class="box">
                     <i class="fa-solid fa-rocket"></i>
-                    <h4>web developer</h4>
+                    <h4>soft skills</h4>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro nihil beatae ex sapiente veritatis eius vel aspernatur dolor enim. Doloremque!</p>
                     <a href="" class="btn">read more</a>
                 </div>
                 <div class="box">
-                    <i class="fa-solid fa-code"></i>
-                    <h4>web developer</h4>
+                    <i class="fa-solid fa-pen-ruler"></i>
+                    <h4>technical skills</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro nihil beatae ex sapiente veritatis eius vel aspernatur dolor enim. Doloremque!</p>
+                    <a href="" class="btn">read more</a>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h4>courses</h4>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro nihil beatae ex sapiente veritatis eius vel aspernatur dolor enim. Doloremque!</p>
                     <a href="" class="btn">read more</a>
                 </div>
@@ -119,7 +120,7 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container">
             <div class="top_section">
                 <h2>explore our popular <span>projects</span></h2>
@@ -135,7 +136,7 @@
                         Quae molestiae dicta inventore modi error dolorum consequuntur 
                         fugit amet at voluptates.</p>
 
-                        <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                        <a href="#" class="link"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             
@@ -149,7 +150,7 @@
                         Quae molestiae dicta inventore modi error dolorum consequuntur 
                         fugit amet at voluptates.</p>
 
-                        <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                        <a href="#" class="link"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
 
@@ -163,7 +164,7 @@
                         Quae molestiae dicta inventore modi error dolorum consequuntur 
                         fugit amet at voluptates.</p>
 
-                        <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                        <a href="#" class="link"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
 
@@ -177,13 +178,13 @@
                         Quae molestiae dicta inventore modi error dolorum consequuntur 
                         fugit amet at voluptates.</p>
 
-                        <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                        <a href="#" class="link"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contacts" id="contact">
+    <section class="contacts" id="contacts">
         <div class="top_section">
             <h2>contact <span>me</span></h2>
         </div>
