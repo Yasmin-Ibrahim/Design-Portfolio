@@ -28,6 +28,7 @@
 //   });
 
 
+
 // add fixed background to header
 
 let header = document.querySelector("header");
@@ -38,4 +39,12 @@ window.onscroll = function(){
     }else{
         header.classList.remove('active');
     }
+}
+
+// activate the header menu
+
+let header_links = document.getElementById('links');
+
+function open_close_menu(){
+    header_links.classList.toggle('active')
 }

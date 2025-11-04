@@ -14,12 +14,12 @@ html {
 }
 
 :root {
-    --main_color: #f4a4b7; /* بينك ناعم (color highlight) */
-    --p_color: #b89f9f; /* بينك باهت/بيج رمادي للنصوص */
-    --bg_color: #fff4f2; /* خلفية فاتحة مائلة للبيج */
-    --white_color: #ffffff; /* أبيض نقي */
-    --black_color: #3b2f2f; /* بني غامق بدل الأسود الحاد */
-    --border_color: rgba(244, 164, 183, 0.3); /* بينك شفاف للإطارات */
+    --main_color: #f4a4b7;
+    --p_color: #b89f9f;
+    --bg_color: #fff4f2;
+    --white_color: #ffffff;
+    --black_color: #3b2f2f;
+    --border_color: rgba(244, 164, 183, 0.3);
 }
 
 body{
@@ -567,4 +567,412 @@ header nav .icons a:hover{
 
 .contacts form .btn:hover{
     scale: 1.1;
+}
+
+/* added */
+
+.close_menu,
+header .container .links .logo,
+.list_menu {
+    display: none;
+}
+
+/* start responsive */
+/* header */
+
+@media (max-width:1250px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media (max-width:1140px){
+    .home .container .content h4{
+        font-size: 25px;
+    }
+
+    .home .container .content h1{
+        font-size: 55px;
+    }
+
+    .home .container .content h2{
+        font-size: 55px;
+    }
+
+    .home .container .content p{
+        font-size: 16px;
+        margin: 20px 0;
+    }
+
+    .home .container .content .btns .btn{
+        font-size: 18px;
+        padding: 16px 35px;
+    }
+}
+
+@media (max-width:1000px){
+    /* header */
+    header .container .links{
+        position: fixed;
+        background: var(--black_color);
+        width: 400px;
+        flex-direction: column;
+        top: 0;
+        left: -400px;
+        padding: 50px 0;
+        text-align: center;
+        border-right: 1px solid var(--border_color);
+        height: 100%;
+        transition: .3s ease-in-out;
+    }
+
+    header .container .links.active{
+        left: 0;
+    }
+
+    header .container .links .close_menu{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+    }
+
+    header .container .links .logo{
+        display: block;
+    }
+
+    .list_menu{
+        display: block;
+        font-size: 28px;
+    }
+
+    /* section */
+
+    section{
+        padding: 50px 0;
+    }
+
+    /* home */
+    .home{
+        height: auto;
+    }
+
+   .home .container{
+        flex-direction: column;
+    }
+
+    .home .container .content{
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .home .container .content h4{
+        font-size: 20px;
+    }
+
+    .home .container .content h1{
+        font-size: 35px;
+    }
+
+    .home .container .content h2{
+        font-size: 45px;
+    }
+
+    .home .container .content p{
+        font-size: 16px;
+        margin: 15px auto;
+    }
+
+    .home .container .content .btns{
+        justify-content: center;
+    }
+
+    .home .container .content .btns .btn{
+        font-size: 16px;
+        padding: 16px 30px;
+    }
+
+    /* about me */
+
+    .about .container{
+        flex-direction: column;
+    }
+
+    .about .container .content{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .about .container .content .intro_job{
+        font-size: 25px;
+    }
+
+    .about .container .content h2{
+        font-size: 35px;
+    }
+
+    .about .container .content .content_about{
+        font-size: 18px;
+    }
+
+    .btn, .about .content .cv label{
+        padding: 16px 20px;
+    }
+
+    .about .container .imgs{
+        width: 45%;
+    }
+
+    /* skills */
+
+    .skills .boxes .box{
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .skills .boxes .box i{
+        font-size: 50px;
+    }
+
+    /* projects */
+
+    .projects .project_box,
+    .projects .project_box.project_box_2{
+        margin-bottom: 70px;
+    }
+
+    .projects .project_box .content {
+        margin-left: 50px;
+        width: calc(50% - 50px);
+    }
+
+    .projects .project_box .content h4{
+        font-size: 18px;
+    }
+
+    .projects .project_box .content h3 a{
+        font-size: 20px;
+    }
+
+    .projects .project_box .content p{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+
+    .projects .project_box .content .link{
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+
+    /* contacts */
+
+    .contacts .container{
+        flex-direction: column;
+    }
+
+    .contacts .social_links{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contacts .social_links .links{
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .contacts .social_links .links a{
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .contacts .social_links .links a i{
+        margin-right: 7px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .contacts form{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .contacts form .inputs_form input,
+    .contacts form .inputs_form textarea{
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .contacts form .btn{
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:500px){
+    section{
+        padding-bottom: 30px;
+    }
+
+    section .top_section{
+        margin-bottom: 50px;
+    }
+
+    section .top_section h2{
+        font-size: 25px;
+    }
+
+    /* header */
+    header .container .icons i{
+        font-size: 20px;
+    }
+    
+    header .container .icons{
+        gap: 15px;
+        align-items: center;
+    }
+
+    header .container .logo img{
+        width: 150px;
+    }
+
+    header .container .links{
+        width: 100%;
+        left: -100%;
+    }
+
+    .list_menu{
+        margin-left: 15px;
+    }
+
+    /* home */
+
+    .home .container .content h1{
+        font-size: 30px;
+    }
+
+    .home .container .content h2{
+        font-size: 40px;
+    }
+
+    .home .container .content .btns .btn{
+        font-size: 14px;
+        padding: 14px 25px;
+    }
+    
+    /* about me */
+    
+    .about .container .content .intro_job{
+        font-size: 20px;
+    }
+
+    .about .container .content h2{
+        font-size: 30px;
+    }
+
+    .about .container .content .content_about{
+        font-size: 16px;
+    }
+
+    .btn, .about .content .cv label{
+        padding: 14px 18px;
+    }
+
+    .about .container .imgs{
+        width: 60%;
+    }
+
+    /* skills */
+
+    .skills .boxes .box{
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    
+    /* projects */
+
+    .projects,
+    .contacts{
+        padding-top: 20px;
+    }
+
+    .projects .project_box{
+        margin-bottom: 50px;
+    }
+
+    .projects .project_box,
+    .projects .project_box.project_box_2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects .project_box img{
+        width: 100%;
+    }
+
+    .projects .project_box .content {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .projects .project_box .content h4{
+        font-size: 18px;
+    }
+
+    .projects .project_box .content h3 a{
+        font-size: 20px;
+    }
+
+    .projects .project_box .content p{
+        margin-bottom: 30px;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .projects .project_box .content .link{
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        font-size: 17px;
+    }
+    
+    /* contacts */
+
+    .contacts .social_links .links{
+        flex-direction: column;
+    }
+
+    .contacts .social_links .links a{
+        font-size: 16px;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 18px;
+    }
+
+    .contacts .social_links .links a i{
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+    }
+
+    .contacts form{
+        width: 100%;
+    }
+
+    .contacts form .inputs_form input,
+    .contacts form .inputs_form textarea{
+        padding: 15px;
+        width: 100%;
+    }
+
+    .contacts form .btn{
+        padding: 12px 22px;
+        font-size: 14px;
+    }
 }
