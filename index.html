@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Yasmin</title>
+    <title>Portfolio</title>
     <link rel="icon" href="img/logo_portfolio.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontawesome-free-6.6.0-web/css/all.min.css">
@@ -23,11 +23,13 @@
     
     <header>
         <nav class="container">
-            <a href="#" class="logo"><img src="img/logo_portfolio.png" alt="logo"></a>
+            <a href="#home" class="logo"><img src="img/logo_portfolio.png" alt="logo"></a>
+            <!-- <a href="#home" class="logo"><img src="img/logo_portfolio_blue.png" width="150" height="80" alt="logo"></a> -->
 
             <div class="links" id="links">
                 <span class="close_menu" onclick="open_close_menu()"><i class="fa-solid fa-xmark"></i></span>
-                <a href="#" class="logo"><img src="img/logo_portfolio.png" alt="logo"></a>
+                <a href="#home" class="logo"><img src="img/logo_portfolio.png" alt="logo"></a>
+                <!-- <a href="#home" class="logo"><img src="img/logo_portfolio_blue.png" width="170" height="100" alt="logo"></a> -->
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
@@ -35,12 +37,7 @@
                 <a href="#contacts">Contacts</a>
             </div>
 
-            <div class="icons">
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                <span class="list_menu" onclick="open_close_menu()"><i class="fa-solid fa-bars"></i></span>
-            </div>
+            <div class="icons"></div>
         </nav>
     </header>
 
@@ -48,19 +45,16 @@
         <div class="container">
             <div class="content">
                 <h4>Hello, I'm</h4>
-                <h1><span>Yasmin Ibrahim</span></h1>
-                <h2>Web Developer</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ipsam provident voluptatum dignissimos aliquam odit cumque 
-                    eum voluptatibus illum dolorem adipisci!</p>
+                <h1><span class="name_client"></span></h1>
+                <h2 class="field_client"></h2>
+                <p class="aboutme_content"></p>
                 <div class="btns">
                     <a href="#contacts" class="btn">Hire me</a>
                 </div>
             </div>
 
             <div class="imgs">
-                <img src="img/home.png" alt="" class="my-img">
-                <img src="img/bg_img_home.png" alt="" class="img-bg">
+                <img class="my-img client_image">
             </div>
         </div>
     </div>
@@ -70,19 +64,12 @@
             <div class="content">
                 <h5>about me</h5>
                 <p class="intro_job">I'm a dedicated</p>
-                <h2><span>{{ client.job_title }}</span></h2>
+                <h2><span class="job_client"></span></h2>
                 <p class="content_about">
-                    based in <strong>{{ client.location }}</strong>, with over <strong>{{ client.experience }} years</strong> of experience in the tech industry.
+                    based in <span class="location"></span>, with over <span class="experience"></span> years of experience in the tech industry.
                     I'm passionate about creating smart and creative digital solutions, 
                     and I value teamwork, learning, and continuous improvement.
                 </p>
-
-                <!-- <ul>
-                    <li><i class="fa-solid fa-check"></i> web development</li>
-                    <li><i class="fa-solid fa-check"></i> UI/UX Design</li>
-                    <li><i class="fa-solid fa-check"></i> digital marketing</li>
-                    <li><i class="fa-solid fa-check"></i> product design</li>
-                </ul> -->
  
                 <div class="cv">
                     <label for="cv">download CV</label>
@@ -91,7 +78,7 @@
             </div>
 
             <div class="imgs">
-                <img src="img/about.jpg" alt="" class="img">
+                <img class="img client_image">
             </div>
         </div>
     </section>
@@ -103,44 +90,62 @@
             </div>
             <div class="boxes">
                 <div class="box">
-                    <i class="fa-solid fa-rocket"></i>
+                    <i class="fa-solid fa-rocket icon"></i>
                     <h4>soft skills</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro nihil beatae ex sapiente veritatis eius vel aspernatur dolor enim. Doloremque!</p>
-                    <a href="" class="btn">read more</a>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> web development</li>
+                        <li><i class="fa-solid fa-check"></i> UI/UX Design</li>
+                        <li><i class="fa-solid fa-check"></i> digital marketing</li>
+                        <li><i class="fa-solid fa-check"></i> product design</li>
+                        <li><i class="fa-solid fa-check"></i> web development</li>
+                        <li><i class="fa-solid fa-check"></i> UI/UX Design</li>
+                        <li><i class="fa-solid fa-check"></i> digital marketing</li>
+                        <li><i class="fa-solid fa-check"></i> product design</li>
+                    </ul>
                 </div>
+
                 <div class="box">
-                    <i class="fa-solid fa-pen-ruler"></i>
+                    <i class="fa-solid fa-pen-ruler icon"></i>
                     <h4>technical skills</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro nihil beatae ex sapiente veritatis eius vel aspernatur dolor enim. Doloremque!</p>
-                    <a href="" class="btn">read more</a>
+                     <ul>
+                        <li><i class="fa-solid fa-check"></i> web development</li>
+                        <li><i class="fa-solid fa-check"></i> UI/UX Design</li>
+                        <li><i class="fa-solid fa-check"></i> digital marketing</li>
+                        <li><i class="fa-solid fa-check"></i> product design</li>
+                        <li><i class="fa-solid fa-check"></i> digital marketing</li>
+                        <li><i class="fa-solid fa-check"></i> product design</li>
+                    </ul>
                 </div>
+
                 <div class="box">
-                    <i class="fa-solid fa-certificate"></i>
+                    <i class="fa-solid fa-certificate icon"></i>
                     <h4>courses</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro nihil beatae ex sapiente veritatis eius vel aspernatur dolor enim. Doloremque!</p>
-                    <a href="" class="btn">read more</a>
+                     <ul>
+                        <li><i class="fa-solid fa-check"></i> web development</li>
+                        <li><i class="fa-solid fa-check"></i> UI/UX Design</li>
+                        <li><i class="fa-solid fa-check"></i> digital marketing</li>
+                        <li><i class="fa-solid fa-check"></i> product design</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="projects" id="projects">
-        <div class="container">
-            <div class="top_section">
+        <div class="container container_projects">
+            <!-- <div class="top_section">
                 <h2>explore our popular <span>projects</span></h2>
-            </div>
+            </div> -->
 
-            <div class="project_box">
-                <img src="img/project1.jpg" alt="project1">
+            <!-- <div class="project_box">
+                <img class="project_image" alt="project1">
 
                 <div class="content">
-                    <h4><span>product design</span></h4>
-                    <h3><a href="">website makeup design</a></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quae molestiae dicta inventore modi error dolorum consequuntur 
-                        fugit amet at voluptates.</p>
+                    <h4><span class="project_title"></span></h4>
+                    <h3 ><a href="" class="project_category"></a></h3>
+                    <p class="project_description"></p>
 
-                        <a href="#" class="link"><i class="fa-solid fa-link"></i></a>
+                    <a href="#" class="link project_link"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             
@@ -184,7 +189,7 @@
 
                         <a href="#" class="link"><i class="fa-solid fa-link"></i></a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -196,29 +201,28 @@
         <div class="container">
             <div class="social_links">
                 <h2>follow me</h2>
-                <div class="links">
-                    <a href="mailto:....."><i class="fa-solid fa-phone"></i>0123456789</a>
-                    <a href="tel:+20......"><i class="fa-solid fa-envelope"></i>email123@gmail.com</a>
-
-                    <a href="#" target="_blank"><i class="fa-brands fa-github"></i>github</a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin</a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i>facebook</a>
-                </div>
+                <div class="links"></div>
             </div>
 
-            <form action="">
+            <form id="form" action="" method="POST">
                 <div class="inputs_form">
-                    <input type="text" placeholder="full name">
-                    <input type="text" placeholder="email">
-                    <input type="text" placeholder="mobile number">
-                    <input type="text" placeholder="subject">
+                    <input type="text" name="name" placeholder="full name">
+                    <input type="email" name="email" placeholder="email">
+                    <input type="number" name="phone" placeholder="mobile number">
+                    <input type="text" name="subject" placeholder="subject">
 
-                    <textarea name="" id="" rows="10" placeholder="your message here..."></textarea>
+                    <textarea name="message" rows="10" placeholder="your message here..."></textarea>
                 </div>
 
-                <button class="btn">send message</button>
+                <button type="submit" class="btn">send message</button>
+
+                 <p id="contactResponse" style="margin-top:10px;"></p>
             </form>
         </div>
+    </section>
+
+    <section class="loader">
+        <img src="img/rajinikanth.gif" alt="loader_food">
     </section>
 
     <script src="js/main.js"></script>
